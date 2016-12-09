@@ -1,0 +1,37 @@
+<?xml version="1.0" ?> 
+<project name="itech" default="jar">
+
+<target name ="jar" depends ="run">
+<mkdir dir ="./jar"/>
+<jar destfile ="./jar/second.jar" basedir ="./java">
+<manifest>
+<attribute name ="main-class" value ="Helloworld"/>
+</manifest>
+</jar>
+</target>
+
+<target name ="run" depends ="compile">
+<echo> Java file is running now </echo>
+<java classname ="Helloworld">
+ 
+<classpath path ="./java"/>
+</java>
+</target>
+
+<target name ="compile">
+<echo>Java file compiled</echo>
+<javac srcdir ="./java" destdir ="./java" />
+</target>
+
+</project>
+
+
+
+
+
+
+
+
+
+
+
