@@ -5,14 +5,14 @@
 <mkdir dir ="./jar"/>
 <jar destfile ="./jar/second.jar" basedir ="./java">
 <manifest>
-<attribute name ="main-class" value ="Helloworld"/>
+<attribute name ="main-class" value ="HelloWorld"/>
 </manifest>
 </jar>
 </target>
 
 <target name ="run" depends ="compile">
 <echo> Java file is running now </echo>
-<java classname ="Helloworld">
+<java classname ="HelloWorld">
  
 <classpath path ="./java"/>
 </java>
